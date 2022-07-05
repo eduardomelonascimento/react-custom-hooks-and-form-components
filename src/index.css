@@ -1,13 +1,64 @@
+* {
+  box-sizing: border-box;
+}
+
 body {
+  max-width: 100vw;
+  width: 100%;
+  min-height: 100vh;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+#root {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+button {
+  padding: 0.5rem 1rem;
+  margin: 0.5rem 0.8rem;
+  cursor: pointer;
+  align-self: flex-end;
+}
+
+form {
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  max-width: 480px;
+  width: 100%;
+}
+
+.capitalize {
+  text-transform: capitalize;
+}
+
+.input {
+  display: block;
+  width: 100%;
+  background: rgb(230, 230, 230);
+  padding: 0.7rem;
+  margin-top: 0.5rem;
+  border: none;
+  color: rgb(70, 70, 70);
+  border-radius: 3px;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  -ms-border-radius: 3px;
+  -o-border-radius: 3px;
+}
+
+.input.valid {
+  outline: 2px solid #84f184;
+  background-color: #f3fdf6;
+}
+.input.invalid {
+  outline: 2px solid #ff9393;
+  background-color: #fce9e9;
 }
